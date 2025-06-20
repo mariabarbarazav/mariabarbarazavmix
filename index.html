@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de X</title>
+    <style>
+        /* Importar fuente Roboto (aproximada a Chirp) */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #000000; /* Texto negro para contraste con fondo blanco */
+        }
+
+        body {
+            background-color: #ffffff; /* Fondo blanco */
+            display: flex;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: #ffffff; /* Fondo blanco para el contenedor */
+        }
+
+        /* Portada */
+        .cover {
+            width: 100%;
+            height: 200px;
+            background-color: #000000; /* Portada negra */
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* Perfil */
+        .profile {
+            position: relative;
+            margin-top: -70px;
+            padding: 0 16px;
+        }
+
+        .profile-pic {
+            width: 134px;
+            height: 134px;
+            border-radius: 50%;
+            border: 4px solid #ffffff; /* Borde blanco para contraste */
+            background-color: #ffffff;
+        }
+
+        .profile-info {
+            margin-top: 12px;
+        }
+
+        .profile-info h1 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        .profile-info .username {
+            font-size: 15px;
+            color: #536471; /* Gris oscuro para contraste */
+            margin-top: 2px;
+        }
+
+        .bio {
+            font-size: 15px;
+            line-height: 20px;
+            margin-top: 12px;
+            text-align: justify; /* Texto justificado */
+            word-spacing: -0.5px; /* Reducir espacio entre palabras */
+        }
+
+        .bio a {
+            color: #1da1f2; /* Azul para enlaces */
+            text-decoration: none;
+        }
+
+        .bio a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tuit */
+        .tweet {
+            border-top: 1px solid #e6ecf0; /* Borde más claro para contraste */
+            padding: 16px;
+            margin-top: 20px;
+        }
+
+        .tweet-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .tweet-header img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        .tweet-header .name {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .tweet-header .username {
+            font-size: 15px;
+            color: #536471; /* Gris oscuro */
+            margin-left: 4px;
+        }
+
+        .tweet-content {
+            font-size: 15px;
+            line-height: 20px;
+            margin-top: 4px;
+            text-align: justify; /* Texto justificado */
+            word-spacing: -0.5px; /* Reducir espacio entre palabras */
+        }
+
+        .tweet-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            color: #536471; /* Gris oscuro */
+            font-size: 13px;
+        }
+
+        .tweet-actions div {
+            display: flex;
+            align-items: center;
+        }
+
+        .tweet-actions div i {
+            margin-right: 8px;
+        }
+
+        /* Íconos (placeholders con emojis) */
+        .icon-comment::before { content: "💬"; }
+        .icon-retweet::before { content: "🔁"; }
+        .icon-like::before { content: "❤️"; }
+        .icon-share::before { content: "🔗"; }
+
+        /* Media Queries para responsividad */
+        @media (max-width: 600px) {
+            .container {
+                padding: 0;
+            }
+
+            .cover {
+                height: 150px; /* Portada más pequeña en móviles */
+            }
+
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+                border: 3px solid #ffffff;
+            }
+
+            .profile {
+                margin-top: -50px;
+                padding: 0 12px;
+            }
+
+            .profile-info h1 {
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            .profile-info .username {
+                font-size: 14px;
+            }
+
+            .bio {
+                font-size: 14px;
+                line-height: 18px;
+                word-spacing: -0.5px; /* Mantener espacio entre palabras en móviles */
+            }
+
+            .tweet-header img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .tweet-content {
+                font-size: 14px;
+                line-height: 18px;
+                word-spacing: -0.5px; /* Mantener espacio entre palabras en móviles */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .cover {
+                height: 120px;
+            }
+
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+            }
+
+            .profile {
+                margin-top: -40px;
+            }
+
+            .profile-info h1 {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .bio {
+                font-size: 13px;
+                line-height: 17px;
+                word-spacing: -0.5px; /* Mantener espacio entre palabras en móviles */
+            }
+
+            .tweet-content {
+                font-size: 13px;
+                line-height: 17px;
+                word-spacing: -0.5px; /* Mantener espacio entre palabras en móviles */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Portada -->
+        <div class="cover"></div>
+
+        <!-- Perfil -->
+        <div class="profile">
+            <img class="profile-pic" src="https://i.postimg.cc/vZzbYWCT/file-00000000804461f59cdaf47e1f8be8f8.png" alt="Foto de perfil">
+            <div class="profile-info">
+                <h1>María Bárbara Zavala</h1>
+                <div class="username">@mariabarbarazav</div>
+                <div class="bio">
+                    Diseñadora digital. Licenciada en administración financiera. Especialista en liderazgo y gestión empresarial. Mis colecciones en filosofía, mentalidad, conocimiento, investigación, información, análisis, estudio de mi profesión y otras ciencias o disciplinas de mi carrera con actitud, liderazgo, bases profesionales y disciplina: <br>
+                    <a href="https://bio.site/mariabarbarazav" target="_blank">bio.site/mariabarbarazav</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tuit -->
+        <div class="tweet">
+            <div class="tweet-header">
+                <img src="https://i.postimg.cc/vZzbYWCT/file-00000000804461f59cdaf47e1f8be8f8.png" alt="Foto de perfil">
+                <div>
+                    <span class="name">mariabarbarazav</span>
+                    <span class="username">@mariabarbarazav</span>
+                </div>
+            </div>
+            <div class="tweet-content">No le temo a lo pequeño cuando sé de qué estoy hecha. Lo grande se construye, no se aparenta.
+            </div>
+            <div class="tweet-actions">
+                <div><i class="icon-comment"></i> 0</div>
+                <div><i class="icon-retweet"></i> 0</div>
+                <div><i class="icon-like"></i> 0</div>
+                <div><i class="icon-share"></i> 0</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
