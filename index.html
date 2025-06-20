@@ -72,8 +72,10 @@
             font-size: 15px;
             line-height: 20px;
             margin-top: 12px;
-            text-align: justify; /* Texto justificado */
-            word-spacing: -0.5px; /* Reducir espacio entre palabras */
+            text-align: justify; /* Texto justificado como en X */
+            word-spacing: 0; /* Espaciado natural entre palabras */
+            letter-spacing: 0; /* Normalizar espaciado entre letras */
+            hyphens: none; /* Evitar guiones automáticos */
         }
 
         .bio a {
@@ -83,6 +85,12 @@
 
         .bio a:hover {
             text-decoration: underline;
+        }
+
+        .bio ul {
+            list-style: none; /* Eliminar puntos de lista */
+            padding: 0; /* Eliminar padding predeterminado */
+            margin: 0; /* Eliminar margen predeterminado */
         }
 
         /* Tuit */
@@ -119,8 +127,10 @@
             font-size: 15px;
             line-height: 20px;
             margin-top: 4px;
-            text-align: justify; /* Texto justificado */
-            word-spacing: -0.5px; /* Reducir espacio entre palabras */
+            text-align: justify; /* Texto justificado como en X */
+            word-spacing: 0; /* Espaciado natural entre palabras */
+            letter-spacing: 0; /* Normalizar espaciado entre letras */
+            hyphens: none; /* Evitar guiones automáticos */
         }
 
         .tweet-actions {
@@ -179,7 +189,10 @@
             .bio {
                 font-size: 14px;
                 line-height: 18px;
-                word-spacing: -0.5px; /* Mantener espacio entre palabras en móviles */
+                text-align: justify; /* Texto justificado como en X */
+                word-spacing: 0; /* Espaciado natural entre palabras */
+                letter-spacing: 0; /* Normalizar espaciado entre letras */
+                hyphens: none; /* Evitar guiones automáticos */
             }
 
             .tweet-header img {
@@ -190,13 +203,17 @@
             .tweet-content {
                 font-size: 14px;
                 line-height: 18px;
-                word-spacing: -0.5px; /* Mantener espacio entre palabras en móviles */
+                text-align: justify; /* Texto justificado como en X */
+                word-spacing: 0; /* Espaciado natural entre palabras */
+                letter-spacing: 0; /* Normalizar espaciado entre letras */
+                hyphens: none; /* Evitar guiones automáticos */
             }
         }
 
         @media (max-width: 400px) {
             .cover {
                 height: 120px;
+                width: auto;
             }
 
             .profile-pic {
@@ -214,15 +231,21 @@
             }
 
             .bio {
-                font-size: 13px;
+                font-size: 11px;
                 line-height: 17px;
-                word-spacing: -0.5px; /* Mantener espacio entre palabras en móviles */
+                text-align: justify; /* Texto justificado como en X */
+                word-spacing: 0; /* Espaciado natural entre palabras */
+                letter-spacing: 0; /* Normalizar espaciado entre letras */
+                hyphens: none; /* Evitar guiones automáticos */
             }
 
             .tweet-content {
-                font-size: 13px;
+                font-size: 11px;
                 line-height: 17px;
-                word-spacing: -0.5px; /* Mantener espacio entre palabras en móviles */
+                text-align: justify; /* Texto justificado como en X */
+                word-spacing: 0; /* Espaciado natural entre palabras */
+                letter-spacing: 0; /* Normalizar espaciado entre letras */
+                hyphens: none; /* Evitar guiones automáticos */
             }
         }
     </style>
@@ -240,6 +263,13 @@
                 <div class="username">@mariabarbarazav</div>
                 <div class="bio">
                     Diseñadora digital. Licenciada en administración financiera. Especialista en liderazgo y gestión empresarial. Mis colecciones en filosofía, mentalidad, conocimiento, investigación, información, análisis, estudio sobre el autoliderazgo enfocado a mi profesión y el ámbito empresarial: crecimiento personal, crecimiento profesional, temas, ciencias y disciplinas de mi carrera o relacionados a mi profesión.<br>
-                    <a href="https://bio.site/mariabarbarazav" target="_blank">bio.site/mariabarbarazav</a>
-                
+                    <ul>
+                        <li><a href="https://unexpected-side-b67.notion.site/Mar-a-Barbara-Zavala-218830a90642800aab53fcdf7fc9825e?source=copy_link" target="_blank">XNotion</a></li>
+                        <li><a href="https://bio.site/mariabarbarazav" target="_blank">bio.site/mariabarbarazav</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
